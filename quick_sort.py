@@ -1,9 +1,6 @@
-import random
+from random_array import random_array
 
-unsorted_arr = []
-
-for x in range(30):
-    unsorted_arr.append(random.randint(0, 30))
+unsorted_arr = random_array(30)
 
 
 def quick_sort(arr):

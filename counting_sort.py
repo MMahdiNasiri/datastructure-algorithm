@@ -1,4 +1,6 @@
-unsorted_arr = [3, 5, 1, 8, 4, 6, 5, 3, 24]
+from random_array import random_array
+
+unsorted_arr = random_array(30)
 
 
 def counting_sort(arr):
