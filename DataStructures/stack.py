@@ -1,4 +1,4 @@
-from LinkedList import Node, LinkedList
+from .LinkedList import Node, LinkedList
 
 
 class StackWithList:
@@ -14,6 +14,9 @@ class StackWithList:
         else:
             return None
 
+    def is_empty(self):
+        return bool(len(self.stack))
+
 
 class StackWithLinkedList:
     def __init__(self):
@@ -24,3 +27,6 @@ class StackWithLinkedList:
 
     def pop(self):
         return self.link_list.pop()
+
+    def is_empty(self):
+        return self.link_list.head is None

@@ -16,9 +16,12 @@ class LinkedList:
     def insert_last(self, value):
         new = Node(value)
         node = self.head
-        while node.next is not None:
-            node = node.next
-        node.next = new
+        if node is None:
+            self.insert_first(value)
+        else:
+            while node.next is not None:
+                node = node.next
+            node.next = new
 
     def insert_middle(self, value, position):
         if position == 0:
